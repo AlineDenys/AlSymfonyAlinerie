@@ -1,0 +1,4 @@
+al_alinerie:
+    resource: "@AlAlinerieBundle/Resources/config/routing.yml"
+    prefix:   /
+
