@@ -6,7 +6,7 @@ namespace Al\AlinerieBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Al\AlinerieBundle\Entity\CategorieRepository")
  */
 class Categorie
 {
@@ -27,6 +27,14 @@ class Categorie
    */
   private $color;
 
+            /**
+   * @ORM\Column(name="bold", type="string", length=255)
+   */
+  private $bold;
+        /**
+   * @ORM\Column(name="slug", type="string", length=255)
+   */
+  private $slug;
   // Getters et setters
 
     /**
@@ -83,5 +91,51 @@ class Categorie
     public function getColor()
     {
         return $this->color;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Categorie
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set bold
+     *
+     * @param string $bold
+     * @return Categorie
+     */
+    public function setBold($bold)
+    {
+        $this->bold = $bold;
+
+        return $this;
+    }
+
+    /**
+     * Get bold
+     *
+     * @return string 
+     */
+    public function getBold()
+    {
+        return $this->bold;
     }
 }

@@ -22,4 +22,17 @@ class ArticleController extends Controller
       'article'           => $article,
     ));
   }
+    
+     public function listeArticleAction()
+  {
+    // On récupère l'EntityManager
+    $em = $this->getDoctrine()->getManager();
+     $listeAlineries = $em->getRepository('AlAlinerieBundle:Article')->getArticles(6);
+         
+      return $this->render('AlAlinerieBundle::listearticle.html.twig', array(
+      'listeAlineries'           => $listeAlineries,
+    ));
+     }
+    
+   
 }

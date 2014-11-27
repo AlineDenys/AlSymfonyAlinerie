@@ -1,0 +1,9 @@
+
+			<h3><span class="bold">Dernières ALINE</span>RIES.</h3>
+			<ul class="dernieresAlineries">
+			
+                {% for alinerie in listeAlineries %}
+            <li class="{{ alinerie.categorie.getSlug() }} shadow-radial" ><a href="{{ path('al_alinerie_homepage', {'article_id': alinerie.id}) }}" ><div class="dateSansTrait">{{ alinerie.date|date('d') }}<span class="bold">{{ alinerie.date|date('m') }}</span><br/>{{ alinerie.date|date('Y') }}</div><p><i class="fa fa-circle fa-1x"></i>{{ alinerie.title }}</p></a></li>
+                {% endfor %}
+			
+			</ul>

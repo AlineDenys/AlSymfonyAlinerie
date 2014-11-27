@@ -64,10 +64,10 @@ class Categorie extends \Al\AlinerieBundle\Entity\Categorie implements \Doctrine
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'id', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'name', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'color');
+            return array('__isInitialized__', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'id', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'name', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'color', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'bold', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'slug');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'id', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'name', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'color');
+        return array('__isInitialized__', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'id', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'name', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'color', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'bold', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Categorie' . "\0" . 'slug');
     }
 
     /**
@@ -230,6 +230,50 @@ class Categorie extends \Al\AlinerieBundle\Entity\Categorie implements \Doctrine
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getColor', array());
 
         return parent::getColor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setSlug($slug)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSlug', array($slug));
+
+        return parent::setSlug($slug);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSlug()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSlug', array());
+
+        return parent::getSlug();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setBold($bold)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setBold', array($bold));
+
+        return parent::setBold($bold);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getBold()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getBold', array());
+
+        return parent::getBold();
     }
 
 }

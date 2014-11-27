@@ -1,0 +1,5 @@
+<ul class="nav" role="navigation">
+    {% for categ in listeCategories %}
+					<li class="{{ categ.slug }} shadow-radial"> <a href="{{ path('al_alinerie_categorie', {'categorie_id': categ.id}) }}"><span class="bold">{{ categ.bold }}</span>{% if categ.slug=="geekerie" or categ.slug=="bypasserie" %}erie.{% else %}rie.{% endif %}</a> </li>
+    {% endfor %}
+</ul>

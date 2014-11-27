@@ -7,7 +7,7 @@ class __TwigTemplate_06493bdb9fc774f7a8f3159dce0c8a66425eb6647569e902764d1ac770f
     {
         parent::__construct($env);
 
-        $this->parent = $this->env->loadTemplate("::layout.twig.html");
+        $this->parent = $this->env->loadTemplate("::layout.html.twig");
 
         $this->blocks = array(
             'article' => array($this, 'block_article'),
@@ -16,7 +16,7 @@ class __TwigTemplate_06493bdb9fc774f7a8f3159dce0c8a66425eb6647569e902764d1ac770f
 
     protected function doGetParent(array $context)
     {
-        return "::layout.twig.html";
+        return "::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -30,19 +30,27 @@ class __TwigTemplate_06493bdb9fc774f7a8f3159dce0c8a66425eb6647569e902764d1ac770f
         // line 4
         echo "\t<section class=\"row\">
 \t\t<div class=\"col-xs-12 col-sm-12 col-md-12\">
-\t\t\t<div class=\"date\">26<span class=\"bold\">02</span><br/>2014</div>
-\t\t\t<h2>VOILA UN BEAU GROS TITRE.</h2>
+\t\t\t<div class=\"date\">";
+        // line 6
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "date", array()), "d"), "html", null, true);
+        echo "<span class=\"bold\">";
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "date", array()), "m"), "html", null, true);
+        echo "</span><br/>";
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "date", array()), "Y"), "html", null, true);
+        echo "</div>
+\t\t\t<h2>";
+        // line 7
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "title", array()), "html", null, true);
+        echo "</h2>
 \t\t\t  
 \t\t\t<article>
 \t\t\t\t
 \t\t\t<div class=\"carre\" style=\"background-image:url('../web/bundles/alalinerie/images/carreBypasserie.png');\"><image src=\"../web/bundles/alalinerie/upload/photo.jpg\" class=\"img-circle \"/></div>
 \t\t\t
-\t\t\t<p>Bonjour,<br/><br/>Je m’appelle Aline, j’ai 26 ans et suis maman d’un petit garçon de 2 ans. J’habite à Téteghem près de Dunkerque dans le nord de la France. Au chômage et me sentant seule, j’ai décidé de partager les activités que j’aime avec vous. Alors, pourquoi faire un blog, me direz-vous ? Vu les dixaines de milliers de blogs sur la toile ! 
-\t\t\t<br/><br/>La vidéo d’anniversaire des 100 épisodes d’Enjoy Phoenix m’a ouvert les yeux sur ce que je pouvais faire pour retrouver un semblant de bonne humeur dans ma vie. J’espère que mes conseils et aventures vous plairont et pourront peut être vous aider à votre tour.
-\t\t\t<br/><br/>
-\t\t\tMerci à Enjoy Phoenix et à vous tous.
-\t\t\tA bientôt<br/><br/>
-\t\t\tAline
+\t\t\t<p>";
+        // line 13
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : null), "content", array()), "html", null, true);
+        echo "
 \t\t\t</p>
 \t\t\t</article>
 \t\t</div>
@@ -62,6 +70,6 @@ class __TwigTemplate_06493bdb9fc774f7a8f3159dce0c8a66425eb6647569e902764d1ac770f
 
     public function getDebugInfo()
     {
-        return array (  31 => 4,  28 => 3,);
+        return array (  52 => 13,  43 => 7,  35 => 6,  31 => 4,  28 => 3,);
     }
 }

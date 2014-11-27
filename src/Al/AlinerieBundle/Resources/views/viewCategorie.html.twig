@@ -1,0 +1,29 @@
+{% extends "::layout.html.twig" %}
+
+{% block article %}
+	<section class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+						  
+			<article>
+				
+			<div class="carreCateg" style="background-image:url('images/carre{{ categorie.name }}png');"><div class="rond {{ categorie.slug }}"/><h3><span class="bold">{{ categorie.bold }}</span>{% if categorie.slug=="geekerie" or categorie.slug=="bypasserie" %}ERIE.{% else %}RIE.{% endif %}</h3></div></div>
+			
+			<p>
+			<ul class="listeCateg">
+                
+                {% for article in listeArticles %}
+                
+			<li>
+			<div class="titreCateg titreCateg{{ categorie.slug|capitalize }} float"><a href="{{ path('al_alinerie_homepage', {'article_id': article.id}) }}"><div class="dateSansTrait">{{ article.date|date('d') }}<span class="bold">{{ article.date|date('m') }}</span><br/>{{ article.date|date('Y') }}</div> <h4>{{ article.title }}</h4></a></div>
+			<p>
+                {{ article.content|length > 150 ? (article.content[:150] ~ "…") : article.content }}
+                </p>
+			</li>
+                {% endfor %}
+			
+			</ul>
+			</p>
+			</article>
+		</div>
+	</section>
+{% endblock %}

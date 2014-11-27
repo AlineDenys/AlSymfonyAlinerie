@@ -1,3 +1,7 @@
 al_alinerie_homepage:
     path:     /article/{article_id}
     defaults: { _controller: AlAlinerieBundle:Article:view }
+    
+al_alinerie_categorie:
+    path:     /categorie/{categorie_id}
+    defaults: { _controller: AlAlinerieBundle:Categorie:view }

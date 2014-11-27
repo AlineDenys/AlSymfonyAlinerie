@@ -27,32 +27,32 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         $context = $this->context;
         $request = $this->request;
 
-        if (0 === strpos($pathinfo, '/css/b2731bc')) {
-            // _assetic_b2731bc
-            if ($pathinfo === '/css/b2731bc.css') {
-                return array (  '_controller' => 'assetic.controller:render',  'name' => 'b2731bc',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_b2731bc',);
+        if (0 === strpos($pathinfo, '/css/e8fa645')) {
+            // _assetic_e8fa645
+            if ($pathinfo === '/css/e8fa645.css') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'e8fa645',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_e8fa645',);
             }
 
-            if (0 === strpos($pathinfo, '/css/b2731bc_')) {
-                // _assetic_b2731bc_0
-                if ($pathinfo === '/css/b2731bc_bootstrap.min_1.css') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b2731bc',  'pos' => 0,  '_format' => 'css',  '_route' => '_assetic_b2731bc_0',);
+            if (0 === strpos($pathinfo, '/css/e8fa645_')) {
+                // _assetic_e8fa645_0
+                if ($pathinfo === '/css/e8fa645_font-awesome.min_1.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'e8fa645',  'pos' => 0,  '_format' => 'css',  '_route' => '_assetic_e8fa645_0',);
                 }
 
-                if (0 === strpos($pathinfo, '/css/b2731bc_part_2_')) {
-                    // _assetic_b2731bc_1
-                    if ($pathinfo === '/css/b2731bc_part_2_font-awesome.min_1.css') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'b2731bc',  'pos' => 1,  '_format' => 'css',  '_route' => '_assetic_b2731bc_1',);
+                // _assetic_e8fa645_1
+                if ($pathinfo === '/css/e8fa645_bootstrap.min_2.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'e8fa645',  'pos' => 1,  '_format' => 'css',  '_route' => '_assetic_e8fa645_1',);
+                }
+
+                if (0 === strpos($pathinfo, '/css/e8fa645_part_3_')) {
+                    // _assetic_e8fa645_2
+                    if ($pathinfo === '/css/e8fa645_part_3_hover-min_1.css') {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'e8fa645',  'pos' => 2,  '_format' => 'css',  '_route' => '_assetic_e8fa645_2',);
                     }
 
-                    // _assetic_b2731bc_2
-                    if ($pathinfo === '/css/b2731bc_part_2_hover-min_2.css') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'b2731bc',  'pos' => 2,  '_format' => 'css',  '_route' => '_assetic_b2731bc_2',);
-                    }
-
-                    // _assetic_b2731bc_3
-                    if ($pathinfo === '/css/b2731bc_part_2_style_3.css') {
-                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'b2731bc',  'pos' => 3,  '_format' => 'css',  '_route' => '_assetic_b2731bc_3',);
+                    // _assetic_e8fa645_3
+                    if ($pathinfo === '/css/e8fa645_part_3_style_2.css') {
+                        return array (  '_controller' => 'assetic.controller:render',  'name' => 'e8fa645',  'pos' => 3,  '_format' => 'css',  '_route' => '_assetic_e8fa645_3',);
                     }
 
                 }
@@ -61,21 +61,21 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/js/a9bb68f')) {
-            // _assetic_a9bb68f
-            if ($pathinfo === '/js/a9bb68f.js') {
-                return array (  '_controller' => 'assetic.controller:render',  'name' => 'a9bb68f',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_a9bb68f',);
+        if (0 === strpos($pathinfo, '/js/57f8873')) {
+            // _assetic_57f8873
+            if ($pathinfo === '/js/57f8873.js') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '57f8873',  'pos' => NULL,  '_format' => 'js',  '_route' => '_assetic_57f8873',);
             }
 
-            if (0 === strpos($pathinfo, '/js/a9bb68f_')) {
-                // _assetic_a9bb68f_0
-                if ($pathinfo === '/js/a9bb68f_jquery-1.9.1.min_1.js') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'a9bb68f',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_a9bb68f_0',);
+            if (0 === strpos($pathinfo, '/js/57f8873_')) {
+                // _assetic_57f8873_0
+                if ($pathinfo === '/js/57f8873_jquery-1.9.1.min_1.js') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '57f8873',  'pos' => 0,  '_format' => 'js',  '_route' => '_assetic_57f8873_0',);
                 }
 
-                // _assetic_a9bb68f_1
-                if ($pathinfo === '/js/a9bb68f_bootstrap-dropdown_2.js') {
-                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'a9bb68f',  'pos' => 1,  '_format' => 'js',  '_route' => '_assetic_a9bb68f_1',);
+                // _assetic_57f8873_1
+                if ($pathinfo === '/js/57f8873_dropdown_2.js') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '57f8873',  'pos' => 1,  '_format' => 'js',  '_route' => '_assetic_57f8873_1',);
                 }
 
             }
@@ -180,6 +180,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // al_alinerie_homepage
         if (0 === strpos($pathinfo, '/article') && preg_match('#^/article/(?P<article_id>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'al_alinerie_homepage')), array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\ArticleController::viewAction',));
+        }
+
+        // al_alinerie_categorie
+        if (0 === strpos($pathinfo, '/categorie') && preg_match('#^/categorie/(?P<categorie_id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'al_alinerie_categorie')), array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\CategorieController::viewAction',));
         }
 
         // _welcome

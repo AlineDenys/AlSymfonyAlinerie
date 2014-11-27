@@ -3,6 +3,7 @@
 namespace Al\AlinerieBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\QueryBuilder;
 
 /**
  * ArticleRepository
@@ -12,4 +13,15 @@ use Doctrine\ORM\EntityRepository;
  */
 class ArticleRepository extends EntityRepository
 {
+    public function getArticles($limit){
+	
+	$qb = $this 
+	->createQueryBuilder('a')
+	->addSelect('a')
+	->orderBy('a.date','DESC')
+	->setMaxResults( $limit );
+	
+	return $qb ->getQuery()->getResult();
+	}
+
 }

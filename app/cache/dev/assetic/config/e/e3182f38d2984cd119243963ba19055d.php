@@ -2,12 +2,13 @@
 
 // ::layout.html.twig
 return array (
-  'b2731bc' => 
+  'e8fa645' => 
   array (
     0 => 
     array (
-      0 => '%kernel.root_dir%/../vendor/twitter/bootstrap/dist/css/bootstrap.min.css',
-      1 => '%kernel.root_dir%/../web/bundles/alalinerie/*',
+      0 => '%kernel.root_dir%/../web/bundles/bmatznerfontawesome/css/font-awesome.min.css',
+      1 => '%kernel.root_dir%/../vendor/twitter/bootstrap/dist/css/bootstrap.min.css',
+      2 => '%kernel.root_dir%/../web/bundles/alalinerie/*',
     ),
     1 => 
     array (
@@ -15,8 +16,8 @@ return array (
     ),
     2 => 
     array (
-      'output' => '_controller/css/b2731bc.css',
-      'name' => 'b2731bc',
+      'output' => '_controller/css/e8fa645.css',
+      'name' => 'e8fa645',
       'debug' => NULL,
       'combine' => NULL,
       'vars' => 
@@ -24,20 +25,20 @@ return array (
       ),
     ),
   ),
-  'a9bb68f' => 
+  '57f8873' => 
   array (
     0 => 
     array (
       0 => '../vendor/jquery/jquery/jquery-1.9.1.min.js',
-      1 => '../vendor/twitter/bootstrap/js/bootstrap-dropdown.js',
+      1 => '../vendor/twitter/bootstrap/js/dropdown.js',
     ),
     1 => 
     array (
     ),
     2 => 
     array (
-      'output' => '_controller/js/a9bb68f.js',
-      'name' => 'a9bb68f',
+      'output' => '_controller/js/57f8873.js',
+      'name' => '57f8873',
       'debug' => NULL,
       'combine' => NULL,
       'vars' => 
