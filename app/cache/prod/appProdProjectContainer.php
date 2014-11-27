@@ -1171,7 +1171,7 @@ class appProdProjectContainer extends Container
             'kernel.root_dir' => 'C:/wamp/www/AlSymfonyAlinerie/app',
             'kernel.environment' => 'prod',
             'kernel.debug' => false,
-            'kernel.name' => 'app',
+            'kernel.name' => 'ap_',
             'kernel.cache_dir' => 'C:/wamp/www/AlSymfonyAlinerie/app/cache/prod',
             'kernel.logs_dir' => 'C:/wamp/www/AlSymfonyAlinerie/app/logs',
             'kernel.bundles' => array(
@@ -1589,7 +1589,7 @@ class appProdProjectContainer extends Container
             ),
             'assetic.java.bin' => 'C:\\Windows\\system32\\java.EXE',
             'assetic.node.bin' => '/usr/bin/node',
-            'assetic.ruby.bin' => '/usr/bin/ruby',
+            'assetic.ruby.bin' => 'C:\\Ruby200\\bin\\ruby.EXE',
             'assetic.sass.bin' => '/usr/bin/sass',
             'assetic.filter.cssrewrite.class' => 'Assetic\\Filter\\CssRewriteFilter',
             'assetic.twig_extension.functions' => array(

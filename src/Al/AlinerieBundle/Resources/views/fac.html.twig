@@ -1,0 +1,10 @@
+<div class="col-sm-12 col-md-4">
+    
+     {% for fac in unFac %}
+			<h3><span class="bold">QUESTION|</span>réponse.</h3><i>Parce que vos questions comptent ...</i>
+			<div class="QR"><br/>
+				<span style="text-align:center;"><i class="fa fa-quote-left"></i>  {{ fac.title }}<br/><strong>{{ fac.author }}</strong></span><p><br/>{{ fac.content }}
+				
+			</div>
+     {% endfor %}
+		</div>

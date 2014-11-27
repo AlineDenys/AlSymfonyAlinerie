@@ -34,5 +34,29 @@ class ArticleController extends Controller
     ));
      }
     
+    
+        public function unZoomAction()
+  {
+    // On récupère l'EntityManager
+    $em = $this->getDoctrine()->getManager();
+     $unZoom = $em->getRepository('AlAlinerieBundle:Aside')->get1Zoom();
+         
+      return $this->render('AlAlinerieBundle::zoom.html.twig', array(
+      'unZoom'           => $unZoom,
+    ));
+     }
+    
+    
+     public function unFacAction()
+  {
+    // On récupère l'EntityManager
+    $em = $this->getDoctrine()->getManager();
+     $unFac = $em->getRepository('AlAlinerieBundle:Aside')->get1Fac();
+         
+      return $this->render('AlAlinerieBundle::fac.html.twig', array(
+      'unFac'           => $unFac,
+    ));
+     }
+    
    
 }

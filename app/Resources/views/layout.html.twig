@@ -68,23 +68,12 @@
         <div class="col-sm-6 col-md-4">
         {{ render(controller('AlAlinerieBundle:Article:listeArticle')) }}	
         </div>
-		<section class="row">
+		<section class="row" style="margin:0px;">
 		
-		<div class="col-sm-6 col-md-4">
-			<h3><span class="bold">ZOOM</span> SUR.</h3><i>Un de mes partenaires ...</i>
-			<div class="zoom">
-			<img src="upload/logoLesCouleursdAnnie.png"/><p>Un petit zoom sur ma petite maman, Annie Buniet, artiste peintre, sans laquelle je ne serais pas qui je suis. Merci Maman, je t'aime.<br/><br/><strong><i class="fa fa-link"></i> <a href="">www.lescouleursdannie.com</a></strong></p>
-			</div>
-		</div>
-		<div class="col-sm-12 col-md-4">
-			<h3><span class="bold">QUESTION|</span>réponse.</h3><i>Parce que vos questions comptent ...</i>
-			<div class="QR"><br/>
-				<span style="text-align:center;"><i class="fa fa-quote-left"></i>  Pourquoi avoir fait ce blog ?<br/><strong>Camille (62)</strong></span><p><br/>La vidéo d’anniversaire des 100 épisodes d’Enjoy Phoenix m’a ouvert les yeux sur ce que je pouvais faire pour retrouver un semblant de bonne humeur dans ma vie. J’espère que mes conseils et aventures vous plairont et pourront peut être vous aider à votre tour.
-			<br/><br/>
-			Merci à Enjoy Phoenix et à vous tous.</p>
-				
-			</div>
-		</div>
+  {{ render(controller('AlAlinerieBundle:Article:unZoom')) }}	
+  {{ render(controller('AlAlinerieBundle:Article:unFac')) }}	
+            
+		
 		</section>
 	
 		<footer>

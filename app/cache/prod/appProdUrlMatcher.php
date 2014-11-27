@@ -32,6 +32,11 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'al_alinerie_homepage')), array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\ArticleController::viewAction',));
         }
 
+        // al_alinerie_categorie
+        if (0 === strpos($pathinfo, '/categorie') && preg_match('#^/categorie/(?P<categorie_id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'al_alinerie_categorie')), array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\CategorieController::viewAction',));
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

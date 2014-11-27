@@ -113,23 +113,18 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
         echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AlAlinerieBundle:Article:listeArticle"));
         echo "\t
         </div>
-\t\t<section class=\"row\">
+\t\t<section class=\"row\" style=\"margin:0px;\">
 \t\t
-\t\t<div class=\"col-sm-6 col-md-4\">
-\t\t\t<h3><span class=\"bold\">ZOOM</span> SUR.</h3><i>Un de mes partenaires ...</i>
-\t\t\t<div class=\"zoom\">
-\t\t\t<img src=\"upload/logoLesCouleursdAnnie.png\"/><p>Un petit zoom sur ma petite maman, Annie Buniet, artiste peintre, sans laquelle je ne serais pas qui je suis. Merci Maman, je t'aime.<br/><br/><strong><i class=\"fa fa-link\"></i> <a href=\"\">www.lescouleursdannie.com</a></strong></p>
-\t\t\t</div>
-\t\t</div>
-\t\t<div class=\"col-sm-12 col-md-4\">
-\t\t\t<h3><span class=\"bold\">QUESTION|</span>réponse.</h3><i>Parce que vos questions comptent ...</i>
-\t\t\t<div class=\"QR\"><br/>
-\t\t\t\t<span style=\"text-align:center;\"><i class=\"fa fa-quote-left\"></i>  Pourquoi avoir fait ce blog ?<br/><strong>Camille (62)</strong></span><p><br/>La vidéo d’anniversaire des 100 épisodes d’Enjoy Phoenix m’a ouvert les yeux sur ce que je pouvais faire pour retrouver un semblant de bonne humeur dans ma vie. J’espère que mes conseils et aventures vous plairont et pourront peut être vous aider à votre tour.
-\t\t\t<br/><br/>
-\t\t\tMerci à Enjoy Phoenix et à vous tous.</p>
-\t\t\t\t
-\t\t\t</div>
-\t\t</div>
+  ";
+        // line 73
+        echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AlAlinerieBundle:Article:unZoom"));
+        echo "\t
+  ";
+        // line 74
+        echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AlAlinerieBundle:Article:unFac"));
+        echo "\t
+            
+\t\t
 \t\t</section>
 \t
 \t\t<footer>
@@ -150,9 +145,9 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
 </div>
     <!-- Bootstrap  + jquery -->
    ";
-        // line 107
+        // line 96
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 115
+        // line 104
         echo "
 <script>
       \$(function (){
@@ -220,15 +215,15 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
     {
     }
 
-    // line 107
+    // line 96
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 108
+        // line 97
         echo "        ";
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "57f8873_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_57f8873_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/js/57f8873_jquery-1.9.1.min_1.js");
-            // line 112
+            // line 101
             echo "            <script type=\"text/javascript\" src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
@@ -248,7 +243,7 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
         ";
         }
         unset($context["asset_url"]);
-        // line 114
+        // line 103
         echo "        ";
     }
 
@@ -264,6 +259,6 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
 
     public function getDebugInfo()
     {
-        return array (  252 => 114,  232 => 112,  227 => 108,  224 => 107,  219 => 59,  214 => 19,  182 => 18,  177 => 14,  174 => 13,  168 => 10,  156 => 115,  154 => 107,  113 => 69,  102 => 60,  100 => 59,  92 => 54,  72 => 37,  68 => 36,  64 => 35,  60 => 34,  51 => 28,  42 => 21,  40 => 13,  34 => 10,  23 => 1,);
+        return array (  247 => 103,  227 => 101,  222 => 97,  219 => 96,  214 => 59,  209 => 19,  177 => 18,  172 => 14,  169 => 13,  163 => 10,  151 => 104,  149 => 96,  124 => 74,  120 => 73,  113 => 69,  102 => 60,  100 => 59,  92 => 54,  72 => 37,  68 => 36,  64 => 35,  60 => 34,  51 => 28,  42 => 21,  40 => 13,  34 => 10,  23 => 1,);
     }
 }
