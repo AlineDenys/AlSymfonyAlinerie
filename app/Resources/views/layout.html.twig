@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+     <title> {% block title %}Alinerie{% endblock %}</title>
+
+    <!-- CSS -->
+    {% block stylesheets %}
+            {% stylesheets
+        '%kernel.root_dir%/../vendor/twitter/bootstrap/dist/css/bootstrap.min.css' '%kernel.root_dir%/../web/bundles/alalinerie/*'
+     filter="cssrewrite"   %}
+                <link rel="stylesheet" href="{{ asset_url }}" />
+            {% endstylesheets %}  
+        {% endblock %}
+
+  </head>
+
+  <body>
+	<div class="container">
+		<header>
+		<div class="row">
+			<div class="col-md-12"><image src="{{ asset('bundles/alalinerie/images/headerBan.png') }}" class="img-responsive"/></div>
+		</div>
+		<div class="row">	
+		
+			<div class="col-xs-12 col-sm-2 col-md-2 logo"><h1><span class="bold">ALINE</span>RIE.</h1></div>
+			<div class="col-md-10 rs">
+				<a href="" class="hover-shadow" data-toggle="tooltip" href="#" title="Facebook"><image src="{{ asset('bundles/alalinerie/images/rsFacebook.png') }}"/></a>
+				<a href="" class="hover-shadow" data-toggle="tooltip" href="#" title="Instagram"><image src="{{ asset('bundles/alalinerie/images/rsInstagram.png') }}"/></a>
+				<a href="" class="hover-shadow" data-toggle="tooltip" href="#" title="YouTube"><image src="{{ asset('bundles/alalinerie/images/rsYoutube.png') }}" /></a>
+				<a href="" class="hover-shadow" data-toggle="tooltip" href="#" title="Me contacter"><image src="{{ asset('bundles/alalinerie/images/rsMail.png') }}"/></a>
+			</div>
+		</div>
+		</header>
+
+	<nav class="row navbar" >
+		<div class="col-sm-12 col-md-12">
+			<div class="navbar-header moderie">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"></a>
+			</div>
+	   
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav" role="navigation">
+					<li class="active bypasserie shadow-radial"> <a href="#"><span class="bold">Bypass</span>erie.</a> </li>
+					<li class="cuisinerie shadow-radial"> <a href="#"><span class="bold">Cuisine</span>rie.</a> </li>
+					<li class="geekerie shadow-radial"> <a href="#"><span class="bold">Geek</span>erie.</a> </li>
+					<li class="moderie shadow-radial"> <a href="#"><span class="bold">Mode</span>rie.</a> </li>
+					<li class="musiquerie shadow-radial"> <a href="#"><span class="bold">Musique</span>rie.</a> </li>
+					<li class="autrerie shadow-radial"> <a href="#"><span class="bold">Autre</span>rie.</a> </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+{% block article %}{% endblock %}
+        
+		<section class="row">
+		<div class="col-md-12">
+			<div class="widgetRS">
+				Widget Réseau sociaux
+			</div>
+		</div>
+		</section>
+		
+		<section class="row">
+		<div class="col-sm-6 col-md-4">
+			<h3><span class="bold">Dernières ALINE</span>RIES.</h3>
+			<ul class="dernieresAlineries">
+			<li class="bypasserie shadow-radial" ><a href="" ><div class="dateSansTrait">26<span class="bold">02</span><br/>2014</div><p><i class="fa fa-circle"></i>Mon bypass et moi</p></a></li>
+			<li class="cuisinerie shadow-radial"><div class="dateSansTrait">26<span class="bold">02</span><br/>2014</div><p><i class="fa fa-circle"></i>Une belle tarte</p></li>
+			<li class="moderie shadow-radial"><div class="dateSansTrait">26<span class="bold">02</span><br/>2014</div><p><i class="fa fa-circle"></i>Mon truc en plume</p></li>
+			<li class="geekerie shadow-radial"><div class="dateSansTrait">26<span class="bold">02</span><br/>2014</div><p><i class="fa fa-circle"></i>ggggg</p></li>
+			<li class="autrerie shadow-radial"><div class="dateSansTrait">26<span class="bold">02</span><br/>2014</div><p><i class="fa fa-circle"></i>ggggg</p></li>
+			<li class="musiquerie shadow-radial"><div class="dateSansTrait">26<span class="bold">02</span><br/>2014</div><p><i class="fa fa-circle"></i>ggggg</p></li>
+			
+			</ul>
+		</div>
+		<div class="col-sm-6 col-md-4">
+			<h3><span class="bold">ZOOM</span> SUR.</h3><i>Un de mes partenaires ...</i>
+			<div class="zoom">
+			<img src="upload/logoLesCouleursdAnnie.png"/><p>Un petit zoom sur ma petite maman, Annie Buniet, artiste peintre, sans laquelle je ne serais pas qui je suis. Merci Maman, je t'aime.<br/><br/><strong><i class="fa fa-link"></i> <a href="">www.lescouleursdannie.com</a></strong></p>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-4">
+			<h3><span class="bold">QUESTION|</span>réponse.</h3><i>Parce que vos questions comptent ...</i>
+			<div class="QR"><br/>
+				<span style="text-align:center;"><i class="fa fa-quote-left"></i>  Pourquoi avoir fait ce blog ?<br/><strong>Camille (62)</strong></span><p><br/>La vidéo d’anniversaire des 100 épisodes d’Enjoy Phoenix m’a ouvert les yeux sur ce que je pouvais faire pour retrouver un semblant de bonne humeur dans ma vie. J’espère que mes conseils et aventures vous plairont et pourront peut être vous aider à votre tour.
+			<br/><br/>
+			Merci à Enjoy Phoenix et à vous tous.</p>
+				
+			</div>
+		</div>
+		</section>
+	
+		<footer>
+			<div class="row traits">
+				<div class="col-xs-2 col-sm-2 col-md-2 bypasserie">&nbsp;</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 cuisinerie">&nbsp;</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 geekerie">&nbsp;</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 moderie">&nbsp;</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 musiquerie">&nbsp;</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 autrerie">&nbsp;</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 copy"><a data-toggle="tooltip" href="#" title="HTML5"><i class="fa fa-html5"></i></a> <a data-toggle="tooltip" href="#" title="CSS3"><i class="fa fa-css3"></i></a> <a data-toggle="tooltip" href="#" title="Font Awesome"><i class="fa fa-flag"></i></a> <a data-toggle="tooltip" href="#" title="Bootstrap Twitter"><i class="fa fa-twitter"></i></a> Copyrights ALINERIE. &copy; 2014 - <a href="">Mentions légales</a></div>
+				<div class="col-md-4"></div>
+			</div>
+		</footer>
+
+</div>
+    <!-- Bootstrap  + jquery -->
+   {% block javascripts %}
+        {% javascripts
+            '../vendor/jquery/jquery/jquery-1.9.1.min.js'
+            '../vendor/twitter/bootstrap/js/bootstrap-dropdown.js'
+        %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        {% endblock %}
+
+<script>
+      $(function (){
+   $('a').tooltip();
+});
+    </script>
+
+	  </body>
+</html>

@@ -21,6 +21,11 @@ class Categorie
    * @ORM\Column(name="name", type="string", length=255)
    */
   private $name;
+    
+    /**
+   * @ORM\Column(name="color", type="string", length=6)
+   */
+  private $color;
 
   // Getters et setters
 
@@ -55,5 +60,28 @@ class Categorie
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set color
+     *
+     * @param string $color
+     * @return Categorie
+     */
+    public function setColor($color)
+    {
+        $this->color = $color;
+
+        return $this;
+    }
+
+    /**
+     * Get color
+     *
+     * @return string 
+     */
+    public function getColor()
+    {
+        return $this->color;
     }
 }

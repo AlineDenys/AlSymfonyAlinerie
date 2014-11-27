@@ -1,0 +1,18 @@
+{% extends "::layout.html.twig" %}
+
+{% block article %}
+	<section class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<div class="date">{{ article.date|date('d') }}<span class="bold">{{ article.date|date('m') }}</span><br/>{{ article.date|date('Y') }}</div>
+			<h2>{{ article.title }}</h2>
+			  
+			<article>
+				
+			<div class="carre" style="background-image:url('../web/bundles/alalinerie/images/carreBypasserie.png');"><image src="../web/bundles/alalinerie/upload/photo.jpg" class="img-circle "/></div>
+			
+			<p>{{ article.content }}
+			</p>
+			</article>
+		</div>
+	</section>
+{% endblock %}

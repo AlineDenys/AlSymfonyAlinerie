@@ -1,3 +1,3 @@
 al_alinerie_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: AlAlinerieBundle:Default:index }
+    path:     /article/{article_id}
+    defaults: { _controller: AlAlinerieBundle:Article:view }
