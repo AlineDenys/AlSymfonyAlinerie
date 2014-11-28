@@ -7,10 +7,13 @@
 				
 			</div>
     
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
      <p>
     <a href="{{ path('al_alinerie_editaside', {'aside_id': fac.id}) }}" class="btn btn-default">
       <i class="fa fa-pencil fa-1x"></i>
       Modifier l'encart
                 </a></p>
+    {% endif %}
+    
      {% endfor %}
 		</div>

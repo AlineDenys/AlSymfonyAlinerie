@@ -136,7 +136,20 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
 \t\t\t\t<div class=\"col-xs-2 col-sm-2 col-md-2 autrerie\">&nbsp;</div>
 \t\t\t</div>
 \t\t\t<div class=\"row\">
-\t\t\t\t<div class=\"col-md-8 copy\"><a data-toggle=\"tooltip\" href=\"#\" title=\"HTML5\"><i class=\"fa fa-html5\"></i></a> <a data-toggle=\"tooltip\" href=\"#\" title=\"CSS3\"><i class=\"fa fa-css3\"></i></a> <a data-toggle=\"tooltip\" href=\"#\" title=\"Font Awesome\"><i class=\"fa fa-flag\"></i></a> <a data-toggle=\"tooltip\" href=\"#\" title=\"Bootstrap Twitter\"><i class=\"fa fa-twitter\"></i></a> Copyrights ALINERIE. &copy; 2014 - <a href=\"\">Mentions légales</a></div>
+\t\t\t\t<div class=\"col-md-8 copy\"><a data-toggle=\"tooltip\" href=\"#\" title=\"HTML5\"><i class=\"fa fa-html5\"></i></a> <a data-toggle=\"tooltip\" href=\"#\" title=\"CSS3\"><i class=\"fa fa-css3\"></i></a> <a data-toggle=\"tooltip\" href=\"#\" title=\"Font Awesome\"><i class=\"fa fa-flag\"></i></a> <a data-toggle=\"tooltip\" href=\"#\" title=\"Bootstrap Twitter\"><i class=\"fa fa-twitter\"></i></a> Copyrights ALINERIE. &copy; 2014 - ";
+        // line 84
+        if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            echo "Bonjour ";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
+            echo " ! <a href=\"";
+            echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
+            echo "\">Déconnexion</a> ";
+        } else {
+            echo "<a href=\"";
+            echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
+            echo "\">Connexion</a>";
+        }
+        echo " </div>
 \t\t\t\t<div class=\"col-md-4\"></div>
 \t\t\t</div>
 \t\t</footer>
@@ -263,6 +276,6 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
 
     public function getDebugInfo()
     {
-        return array (  251 => 98,  231 => 96,  226 => 92,  223 => 91,  218 => 61,  213 => 59,  208 => 19,  176 => 18,  171 => 14,  168 => 13,  162 => 10,  150 => 99,  148 => 91,  123 => 69,  119 => 68,  112 => 64,  108 => 62,  106 => 61,  103 => 60,  101 => 59,  93 => 54,  73 => 37,  69 => 36,  65 => 35,  61 => 34,  52 => 28,  43 => 21,  41 => 13,  35 => 10,  24 => 1,);
+        return array (  264 => 98,  244 => 96,  239 => 92,  236 => 91,  231 => 61,  226 => 59,  221 => 19,  189 => 18,  184 => 14,  181 => 13,  175 => 10,  163 => 99,  161 => 91,  141 => 84,  123 => 69,  119 => 68,  112 => 64,  108 => 62,  106 => 61,  103 => 60,  101 => 59,  93 => 54,  73 => 37,  69 => 36,  65 => 35,  61 => 34,  52 => 28,  43 => 21,  41 => 13,  35 => 10,  24 => 1,);
     }
 }

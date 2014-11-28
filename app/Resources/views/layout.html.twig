@@ -81,7 +81,7 @@
 				<div class="col-xs-2 col-sm-2 col-md-2 autrerie">&nbsp;</div>
 			</div>
 			<div class="row">
-				<div class="col-md-8 copy"><a data-toggle="tooltip" href="#" title="HTML5"><i class="fa fa-html5"></i></a> <a data-toggle="tooltip" href="#" title="CSS3"><i class="fa fa-css3"></i></a> <a data-toggle="tooltip" href="#" title="Font Awesome"><i class="fa fa-flag"></i></a> <a data-toggle="tooltip" href="#" title="Bootstrap Twitter"><i class="fa fa-twitter"></i></a> Copyrights ALINERIE. &copy; 2014 - <a href="">Mentions légales</a></div>
+				<div class="col-md-8 copy"><a data-toggle="tooltip" href="#" title="HTML5"><i class="fa fa-html5"></i></a> <a data-toggle="tooltip" href="#" title="CSS3"><i class="fa fa-css3"></i></a> <a data-toggle="tooltip" href="#" title="Font Awesome"><i class="fa fa-flag"></i></a> <a data-toggle="tooltip" href="#" title="Bootstrap Twitter"><i class="fa fa-twitter"></i></a> Copyrights ALINERIE. &copy; 2014 - {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}Bonjour {{ app.user.username }} ! <a href="{{ path('fos_user_security_logout') }}">Déconnexion</a> {% else %}<a href="{{ path('fos_user_security_login') }}">Connexion</a>{% endif %} </div>
 				<div class="col-md-4"></div>
 			</div>
 		</footer>

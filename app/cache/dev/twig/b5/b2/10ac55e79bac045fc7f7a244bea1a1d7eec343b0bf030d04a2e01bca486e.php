@@ -37,20 +37,28 @@ class __TwigTemplate_b5b210ac55e79bac045fc7f7a244bea1a1d7eec343b0bf030d04a2e01bc
 \t\t\t\t
 \t\t\t</div>
     
-     <p>
+    ";
+            // line 10
+            if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+                // line 11
+                echo "     <p>
     <a href=\"";
-            // line 11
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("al_alinerie_editaside", array("aside_id" => $this->getAttribute($context["fac"], "id", array()))), "html", null, true);
-            echo "\" class=\"btn btn-default\">
+                // line 12
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("al_alinerie_editaside", array("aside_id" => $this->getAttribute($context["fac"], "id", array()))), "html", null, true);
+                echo "\" class=\"btn btn-default\">
       <i class=\"fa fa-pencil fa-1x\"></i>
       Modifier l'encart
                 </a></p>
+    ";
+            }
+            // line 17
+            echo "    
      ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['fac'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 16
+        // line 19
         echo "\t\t</div>";
     }
 
@@ -66,6 +74,6 @@ class __TwigTemplate_b5b210ac55e79bac045fc7f7a244bea1a1d7eec343b0bf030d04a2e01bc
 
     public function getDebugInfo()
     {
-        return array (  54 => 16,  43 => 11,  31 => 6,  27 => 4,  23 => 3,  19 => 1,);
+        return array (  62 => 19,  55 => 17,  47 => 12,  44 => 11,  42 => 10,  31 => 6,  27 => 4,  23 => 3,  19 => 1,);
     }
 }

@@ -78,32 +78,37 @@ class __TwigTemplate_06493bdb9fc774f7a8f3159dce0c8a66425eb6647569e902764d1ac770f
 \t\t<div class=\"col-md-12\">
 \t\t\t<div class=\"widgetRS\">
 \t\t\t
-\t\t\t
+\t";
+        // line 28
+        if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            echo "\t\t
   <p>
     <a href=\"";
-        // line 30
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("al_alinerie_editarticle", array("article_id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "id", array()))), "html", null, true);
-        echo "\" class=\"btn btn-default\">
+            // line 30
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("al_alinerie_editarticle", array("article_id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "id", array()))), "html", null, true);
+            echo "\" class=\"btn btn-default\">
       <i class=\"fa fa-pencil fa-1x\"></i>
       Modifier l'article
     </a>
     <a href=\"";
-        // line 34
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("al_alinerie_deletearticle", array("article_id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "id", array()))), "html", null, true);
-        echo "\" class=\"btn btn-danger\">
+            // line 34
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("al_alinerie_deletearticle", array("article_id" => $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "id", array()))), "html", null, true);
+            echo "\" class=\"btn btn-danger\">
       <i class=\"fa fa-trash fa-1x\"></i>
       Supprimer l'article
     </a>
       <a href=\"";
-        // line 38
-        echo $this->env->getExtension('routing')->getPath("al_alinerie_addarticle");
-        echo "\" class=\"btn btn-info\">
+            // line 38
+            echo $this->env->getExtension('routing')->getPath("al_alinerie_addarticle");
+            echo "\" class=\"btn btn-info\">
       <i class=\"fa fa-plus fa-1x\"></i>
       Ajouter un nouvel article
     </a>
   </p>
-                
-                </div>
+                ";
+        }
+        // line 44
+        echo "                </div>
 \t\t</div>
 \t\t</section>
 
@@ -122,6 +127,6 @@ class __TwigTemplate_06493bdb9fc774f7a8f3159dce0c8a66425eb6647569e902764d1ac770f
 
     public function getDebugInfo()
     {
-        return array (  99 => 38,  92 => 34,  85 => 30,  76 => 23,  73 => 22,  63 => 14,  60 => 13,  51 => 11,  44 => 7,  36 => 6,  32 => 4,  29 => 3,);
+        return array (  111 => 44,  102 => 38,  95 => 34,  88 => 30,  83 => 28,  76 => 23,  73 => 22,  63 => 14,  60 => 13,  51 => 11,  44 => 7,  36 => 6,  32 => 4,  29 => 3,);
     }
 }
