@@ -1,0 +1,25 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+  Modifier un article - {{ parent() }}
+{% endblock %}
+
+{% block article %}
+
+  <h2>Modifier un article</h2>
+
+  {{ include("AlAlinerieBundle:Article:form.html.twig") }}
+
+  <p>
+    Vous éditez un article déjà existant, merci de ne pas changer
+    l'esprit général de l'article déjà publié.
+  </p>
+
+  <p>
+    <a href="{{ path('al_alinerie_viewarticle', {'article_id': article.id}) }}" class="btn btn-default">
+      <i class="fa fa-angle-left fa-1x"></i>
+      Retour à l'article
+    </a>
+  </p>
+
+{% endblock %}

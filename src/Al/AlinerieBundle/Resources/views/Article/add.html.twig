@@ -1,0 +1,17 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+  Ajouter une annonce - {{ parent() }}
+{% endblock %}
+
+{% block article %}
+
+  <h2>Ajouter un article</h2>
+
+  {{ include("AlAlinerieBundle:Article:form.html.twig") }}
+
+  <p>
+    Merci de remplir tous les champs afin d'optimiser la vue générale de l'article sur le site.
+  </p>
+
+{% endblock %}

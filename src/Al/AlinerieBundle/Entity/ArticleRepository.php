@@ -23,5 +23,17 @@ class ArticleRepository extends EntityRepository
 	
 	return $qb ->getQuery()->getResult();
 	}
+    
+       public function getDernierArticle(){
+	
+	$qb = $this 
+	->createQueryBuilder('a')
+	->addSelect('a')
+	->orderBy('a.date','DESC')
+	->setMaxResults( 1 );
+	
+	return $qb ->getQuery()->getSingleResult();
+	}
+
 
 }

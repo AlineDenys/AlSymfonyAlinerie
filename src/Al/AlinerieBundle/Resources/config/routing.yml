@@ -1,7 +1,32 @@
 al_alinerie_homepage:
+    path:     /
+    defaults: { _controller: AlAlinerieBundle:Article:index }
+
+        
+al_alinerie_viewarticle:
     path:     /article/{article_id}
     defaults: { _controller: AlAlinerieBundle:Article:view }
+    requirements:
+        article_id: \d+
     
 al_alinerie_categorie:
     path:     /categorie/{categorie_id}
     defaults: { _controller: AlAlinerieBundle:Categorie:view }
+    requirements:
+        categorie_id: \d+
+    
+al_alinerie_addarticle:
+    path:    /add
+    defaults: {_controller: AlAlinerieBundle:Article:addArticle}
+
+al_alinerie_editarticle:
+    path:    /edit/{article_id}
+    defaults: {_controller: AlAlinerieBundle:Article:editArticle}
+    requirements:
+        id: \d+
+
+al_alinerie_deletearticle:
+    path:    /delete/{article_id}
+    defaults: {_controller: AlAlinerieBundle:Article:deleteArticle}
+    requirements:
+        id: \d+

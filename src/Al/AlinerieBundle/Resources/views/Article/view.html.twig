@@ -8,11 +8,41 @@
 			  
 			<article>
 				
-			<div class="carre" style="background-image:url('../web/bundles/alalinerie/images/carreBypasserie.png');"><image src="../web/bundles/alalinerie/upload/photo.jpg" class="img-circle "/></div>
+		{% if article.image is not null %}	<div class="carre" style="background-image:url('../web/bundles/alalinerie/images/carre{{ article.categorie.getName() }}png');"><image src="{{ asset(article.image.webPath) }}" class="img-circle "/></div>
+                {% endif %}
 			
 			<p>{{ article.content }}
 			</p>
 			</article>
 		</div>
 	</section>
+{% endblock %}
+
+
+{% block admin %}
+        
+		<section class="row">
+		<div class="col-md-12">
+			<div class="widgetRS">
+			
+			
+  <p>
+    <a href="{{ path('al_alinerie_editarticle', {'article_id': article.id}) }}" class="btn btn-default">
+      <i class="fa fa-pencil fa-1x"></i>
+      Modifier l'article
+    </a>
+    <a href="{{ path('al_alinerie_deletearticle', {'article_id': article.id}) }}" class="btn btn-danger">
+      <i class="fa fa-trash fa-1x"></i>
+      Supprimer l'article
+    </a>
+      <a href="{{ path('al_alinerie_addarticle') }}" class="btn btn-info">
+      <i class="fa fa-plus fa-1x"></i>
+      Ajouter un nouvel article
+    </a>
+  </p>
+                
+                </div>
+		</div>
+		</section>
+
 {% endblock %}

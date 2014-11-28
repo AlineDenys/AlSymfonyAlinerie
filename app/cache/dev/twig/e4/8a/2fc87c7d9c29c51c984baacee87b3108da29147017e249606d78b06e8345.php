@@ -13,6 +13,7 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
             'article' => array($this, 'block_article'),
+            'admin' => array($this, 'block_admin'),
             'javascripts' => array($this, 'block_javascripts'),
         );
     }
@@ -100,27 +101,25 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
         $this->displayBlock('article', $context, $blocks);
         // line 60
         echo "        
-\t\t<section class=\"row\">
-\t\t<div class=\"col-md-12\">
-\t\t\t<div class=\"widgetRS\">
-\t\t\t\tWidget Réseau sociaux
-\t\t\t</div>
-\t\t</div>
-\t\t</section>
+";
+        // line 61
+        $this->displayBlock('admin', $context, $blocks);
+        // line 62
+        echo "        
         <div class=\"col-sm-6 col-md-4\">
         ";
-        // line 69
+        // line 64
         echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AlAlinerieBundle:Article:listeArticle"));
         echo "\t
         </div>
 \t\t<section class=\"row\" style=\"margin:0px;\">
 \t\t
   ";
-        // line 73
+        // line 68
         echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AlAlinerieBundle:Article:unZoom"));
         echo "\t
   ";
-        // line 74
+        // line 69
         echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AlAlinerieBundle:Article:unFac"));
         echo "\t
             
@@ -145,9 +144,9 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
 </div>
     <!-- Bootstrap  + jquery -->
    ";
-        // line 96
+        // line 91
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 104
+        // line 99
         echo "
 <script>
       \$(function (){
@@ -215,15 +214,20 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
     {
     }
 
-    // line 96
+    // line 61
+    public function block_admin($context, array $blocks = array())
+    {
+    }
+
+    // line 91
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 97
+        // line 92
         echo "        ";
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "57f8873_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_57f8873_0") : $this->env->getExtension('assets')->getAssetUrl("_controller/js/57f8873_jquery-1.9.1.min_1.js");
-            // line 101
+            // line 96
             echo "            <script type=\"text/javascript\" src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
@@ -243,7 +247,7 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
         ";
         }
         unset($context["asset_url"]);
-        // line 103
+        // line 98
         echo "        ";
     }
 
@@ -259,6 +263,6 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
 
     public function getDebugInfo()
     {
-        return array (  247 => 103,  227 => 101,  222 => 97,  219 => 96,  214 => 59,  209 => 19,  177 => 18,  172 => 14,  169 => 13,  163 => 10,  151 => 104,  149 => 96,  124 => 74,  120 => 73,  113 => 69,  102 => 60,  100 => 59,  92 => 54,  72 => 37,  68 => 36,  64 => 35,  60 => 34,  51 => 28,  42 => 21,  40 => 13,  34 => 10,  23 => 1,);
+        return array (  251 => 98,  231 => 96,  226 => 92,  223 => 91,  218 => 61,  213 => 59,  208 => 19,  176 => 18,  171 => 14,  168 => 13,  162 => 10,  150 => 99,  148 => 91,  123 => 69,  119 => 68,  112 => 64,  108 => 62,  106 => 61,  103 => 60,  101 => 59,  93 => 54,  73 => 37,  69 => 36,  65 => 35,  61 => 34,  52 => 28,  43 => 21,  41 => 13,  35 => 10,  24 => 1,);
     }
 }

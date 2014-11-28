@@ -29,7 +29,7 @@ class __TwigTemplate_2cfa71a9d01392c4ace8fea8856ec748143b9332da4e15c64135d813830
             echo "            <li class=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["alinerie"], "categorie", array()), "getSlug", array(), "method"), "html", null, true);
             echo " shadow-radial\" ><a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("al_alinerie_homepage", array("article_id" => $this->getAttribute($context["alinerie"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("al_alinerie_viewarticle", array("article_id" => $this->getAttribute($context["alinerie"], "id", array()))), "html", null, true);
             echo "\" ><div class=\"dateSansTrait\">";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["alinerie"], "date", array()), "d"), "html", null, true);
             echo "<span class=\"bold\">";

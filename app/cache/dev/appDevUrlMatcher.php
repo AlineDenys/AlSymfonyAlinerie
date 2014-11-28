@@ -178,13 +178,37 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // al_alinerie_homepage
-        if (0 === strpos($pathinfo, '/article') && preg_match('#^/article/(?P<article_id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'al_alinerie_homepage')), array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\ArticleController::viewAction',));
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'al_alinerie_homepage');
+            }
+
+            return array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\ArticleController::indexAction',  '_route' => 'al_alinerie_homepage',);
+        }
+
+        // al_alinerie_viewarticle
+        if (0 === strpos($pathinfo, '/article') && preg_match('#^/article/(?P<article_id>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'al_alinerie_viewarticle')), array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\ArticleController::viewAction',));
         }
 
         // al_alinerie_categorie
-        if (0 === strpos($pathinfo, '/categorie') && preg_match('#^/categorie/(?P<categorie_id>[^/]++)$#s', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/categorie') && preg_match('#^/categorie/(?P<categorie_id>\\d+)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'al_alinerie_categorie')), array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\CategorieController::viewAction',));
+        }
+
+        // al_alinerie_addarticle
+        if ($pathinfo === '/add') {
+            return array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\ArticleController::addArticleAction',  '_route' => 'al_alinerie_addarticle',);
+        }
+
+        // al_alinerie_editarticle
+        if (0 === strpos($pathinfo, '/edit') && preg_match('#^/edit/(?P<article_id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'al_alinerie_editarticle')), array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\ArticleController::editArticleAction',));
+        }
+
+        // al_alinerie_deletearticle
+        if (0 === strpos($pathinfo, '/delete') && preg_match('#^/delete/(?P<article_id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'al_alinerie_deletearticle')), array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\ArticleController::deleteArticleAction',));
         }
 
         // _welcome

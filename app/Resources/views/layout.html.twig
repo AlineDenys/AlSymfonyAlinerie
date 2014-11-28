@@ -58,13 +58,8 @@
 
 {% block article %}{% endblock %}
         
-		<section class="row">
-		<div class="col-md-12">
-			<div class="widgetRS">
-				Widget Réseau sociaux
-			</div>
-		</div>
-		</section>
+{% block admin %}{% endblock %}
+        
         <div class="col-sm-6 col-md-4">
         {{ render(controller('AlAlinerieBundle:Article:listeArticle')) }}	
         </div>

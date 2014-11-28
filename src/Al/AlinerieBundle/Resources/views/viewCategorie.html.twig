@@ -14,7 +14,7 @@
                 {% for article in listeArticles %}
                 
 			<li>
-			<div class="titreCateg titreCateg{{ categorie.slug|capitalize }} float"><a href="{{ path('al_alinerie_homepage', {'article_id': article.id}) }}"><div class="dateSansTrait">{{ article.date|date('d') }}<span class="bold">{{ article.date|date('m') }}</span><br/>{{ article.date|date('Y') }}</div> <h4>{{ article.title }}</h4></a></div>
+			<div class="titreCateg titreCateg{{ categorie.slug|capitalize }} float"><a href="{{ path('al_alinerie_viewarticle', {'article_id': article.id}) }}"><div class="dateSansTrait">{{ article.date|date('d') }}<span class="bold">{{ article.date|date('m') }}</span><br/>{{ article.date|date('Y') }}</div> <h4>{{ article.title }}</h4></a></div>
 			<p>
                 {{ article.content|length > 150 ? (article.content[:150] ~ "…") : article.content }}
                 </p>
