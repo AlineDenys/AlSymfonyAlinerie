@@ -23,6 +23,7 @@
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
+      <parameter key="CoreSphereConsoleBundle">CoreSphere\ConsoleBundle\CoreSphereConsoleBundle</parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
@@ -445,7 +446,7 @@
     <parameter key="assetic.variables" type="collection"/>
     <parameter key="assetic.java.bin">C:\Windows\system32\java.EXE</parameter>
     <parameter key="assetic.node.bin">/usr/bin/node</parameter>
-    <parameter key="assetic.ruby.bin">/usr/bin/ruby</parameter>
+    <parameter key="assetic.ruby.bin">C:\Ruby200\bin\ruby.EXE</parameter>
     <parameter key="assetic.sass.bin">/usr/bin/sass</parameter>
     <parameter key="assetic.filter.cssrewrite.class">Assetic\Filter\CssRewriteFilter</parameter>
     <parameter key="assetic.twig_extension.functions" type="collection"/>
@@ -622,6 +623,10 @@
       <parameter key="data_collector.doctrine" type="collection">
         <parameter>db</parameter>
         <parameter>DoctrineBundle:Collector:db</parameter>
+      </parameter>
+      <parameter key="coresphere_console.toolbar" type="collection">
+        <parameter>coresphere_console</parameter>
+        <parameter>CoreSphereConsoleBundle:Toolbar:toolbar</parameter>
       </parameter>
     </parameter>
     <parameter key="console.command.ids" type="collection">
@@ -1963,6 +1968,48 @@
         <argument>zh_CN</argument>
         <argument>validators</argument>
       </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>C:\wamp\www\AlSymfonyAlinerie\vendor\coresphere\console-bundle\CoreSphere\ConsoleBundle/Resources/translations\messages.bg.yml</argument>
+        <argument>bg</argument>
+        <argument>messages</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>C:\wamp\www\AlSymfonyAlinerie\vendor\coresphere\console-bundle\CoreSphere\ConsoleBundle/Resources/translations\messages.de.yml</argument>
+        <argument>de</argument>
+        <argument>messages</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>C:\wamp\www\AlSymfonyAlinerie\vendor\coresphere\console-bundle\CoreSphere\ConsoleBundle/Resources/translations\messages.en.yml</argument>
+        <argument>en</argument>
+        <argument>messages</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>C:\wamp\www\AlSymfonyAlinerie\vendor\coresphere\console-bundle\CoreSphere\ConsoleBundle/Resources/translations\messages.fr.yml</argument>
+        <argument>fr</argument>
+        <argument>messages</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>C:\wamp\www\AlSymfonyAlinerie\vendor\coresphere\console-bundle\CoreSphere\ConsoleBundle/Resources/translations\messages.it.yml</argument>
+        <argument>it</argument>
+        <argument>messages</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>C:\wamp\www\AlSymfonyAlinerie\vendor\coresphere\console-bundle\CoreSphere\ConsoleBundle/Resources/translations\messages.pl.yml</argument>
+        <argument>pl</argument>
+        <argument>messages</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>C:\wamp\www\AlSymfonyAlinerie\vendor\coresphere\console-bundle\CoreSphere\ConsoleBundle/Resources/translations\messages.ru.yml</argument>
+        <argument>ru</argument>
+        <argument>messages</argument>
+      </call>
     </service>
     <service id="translation.loader.php" class="Symfony\Component\Translation\Loader\PhpFileLoader">
       <tag name="translation.loader" alias="php"/>
@@ -2806,6 +2853,9 @@
           </service>
         </argument>
       </call>
+      <call method="add">
+        <argument type="service" id="coresphere_console.toolbar"/>
+      </call>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -2947,7 +2997,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5478a498c4204</argument>
+            <argument>5478aef05f4bc</argument>
           </service>
         </argument>
       </argument>
@@ -3255,7 +3305,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>5478a498c4204</argument>
+            <argument>5478aef05f4bc</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -3958,6 +4008,10 @@
           <argument>db</argument>
           <argument>DoctrineBundle:Collector:db</argument>
         </argument>
+        <argument key="coresphere_console.toolbar" type="collection">
+          <argument>coresphere_console</argument>
+          <argument>CoreSphereConsoleBundle:Toolbar:toolbar</argument>
+        </argument>
       </argument>
       <argument>bottom</argument>
     </service>
@@ -4002,6 +4056,9 @@
     <service id="sensio_distribution.security_checker.command" class="SensioLabs\Security\Command\SecurityCheckerCommand">
       <tag name="console.command"/>
       <argument type="service" id="sensio_distribution.security_checker"/>
+    </service>
+    <service id="coresphere_console.toolbar" class="CoreSphere\ConsoleBundle\DataCollector\DataCollector">
+      <tag name="data_collector" template="CoreSphereConsoleBundle:Toolbar:toolbar" id="coresphere_console"/>
     </service>
     <service id="monolog.logger.request" class="Symfony\Bridge\Monolog\Logger">
       <argument>request</argument>
@@ -4269,6 +4326,10 @@
       <call method="addPath">
         <argument>C:\wamp\www\AlSymfonyAlinerie\vendor\sensio\distribution-bundle\Sensio\Bundle\DistributionBundle/Resources/views</argument>
         <argument>SensioDistribution</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\AlSymfonyAlinerie\vendor\coresphere\console-bundle\CoreSphere\ConsoleBundle/Resources/views</argument>
+        <argument>CoreSphereConsole</argument>
       </call>
       <call method="addPath">
         <argument>C:/wamp/www/AlSymfonyAlinerie/app/Resources/views</argument>

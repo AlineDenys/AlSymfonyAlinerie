@@ -21,7 +21,8 @@
         "jquery/jquery": "1.9.1",
         "twitter/bootstrap": "3.1.*",
          "bmatzner/fontawesome-bundle": "~4.2",
-        "friendsofsymfony/user-bundle": "dev-master"
+        "friendsofsymfony/user-bundle": "dev-master",
+        "coresphere/console-bundle": "dev-master"
     },
     "repositories": [
     {

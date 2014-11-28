@@ -1771,5 +1771,57 @@
         "keywords": [
             "User management"
         ]
+    },
+    {
+        "name": "coresphere/console-bundle",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "target-dir": "CoreSphere/ConsoleBundle",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/CoreSphere/ConsoleBundle.git",
+            "reference": "6cf6090c995badc566e88ddd2ff5749f1cdcba7c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/CoreSphere/ConsoleBundle/zipball/6cf6090c995badc566e88ddd2ff5749f1cdcba7c",
+            "reference": "6cf6090c995badc566e88ddd2ff5749f1cdcba7c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3",
+            "symfony/framework-bundle": ">=2.1.0,<3.0"
+        },
+        "require-dev": {
+            "symfony/console": ">=2.1.0,<3.0"
+        },
+        "time": "2014-06-13 10:21:57",
+        "type": "symfony-bundle",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "CoreSphere\\ConsoleBundle": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Laszlo Korte",
+                "email": "coresphere@laszlokorte.de"
+            },
+            {
+                "name": "Markus Ullmann",
+                "email": "mail@markus-ullmann.de"
+            }
+        ],
+        "description": "This bundle allows you accessing the symfony2 console via your browser",
+        "keywords": [
+            "console",
+            "javascript",
+            "symfony"
+        ]
     }
 ]
