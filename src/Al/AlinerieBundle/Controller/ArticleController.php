@@ -9,7 +9,6 @@ use Sensio\Bundle\FrameworkExtraBundle\configuration\ParamConverter;
 use Al\AlinerieBundle\Form\ArticleType;
 use Al\AlinerieBundle\Form\ArticleEditType;
 
-
 class ArticleController extends Controller
 {
     
@@ -171,5 +170,9 @@ class ArticleController extends Controller
     ));
   }
 
+    public function wrongRouteAction($url)
+{
+ throw $this->createNotFoundException("L'url n'existe pas !");
+}
    
 }

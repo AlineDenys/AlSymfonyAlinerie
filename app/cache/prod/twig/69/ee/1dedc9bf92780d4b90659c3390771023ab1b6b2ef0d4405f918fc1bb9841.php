@@ -63,7 +63,7 @@ class __TwigTemplate_69ee1dedc9bf92780d4b90659c3390771023ab1b6b2ef0d4405f918fc1b
             // line 17
             echo twig_escape_filter($this->env, twig_capitalize_string_filter($this->env, $this->getAttribute((isset($context["categorie"]) ? $context["categorie"] : null), "slug", array())), "html", null, true);
             echo " float\"><a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("al_alinerie_homepage", array("article_id" => $this->getAttribute($context["article"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("al_alinerie_viewarticle", array("article_id" => $this->getAttribute($context["article"], "id", array()))), "html", null, true);
             echo "\"><div class=\"dateSansTrait\">";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["article"], "date", array()), "d"), "html", null, true);
             echo "<span class=\"bold\">";

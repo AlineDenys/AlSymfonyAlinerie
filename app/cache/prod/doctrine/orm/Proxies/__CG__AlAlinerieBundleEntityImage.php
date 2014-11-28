@@ -64,10 +64,10 @@ class Image extends \Al\AlinerieBundle\Entity\Image implements \Doctrine\ORM\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'id', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'url', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'alt', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'file', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'tempFilename');
+            return array('__isInitialized__', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'id', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'extension', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'alt', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'file', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'tempFilename');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'id', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'url', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'alt', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'file', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'tempFilename');
+        return array('__isInitialized__', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'id', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'extension', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'alt', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'file', '' . "\0" . 'Al\\AlinerieBundle\\Entity\\Image' . "\0" . 'tempFilename');
     }
 
     /**
@@ -202,28 +202,6 @@ class Image extends \Al\AlinerieBundle\Entity\Image implements \Doctrine\ORM\Pro
     /**
      * {@inheritDoc}
      */
-    public function setUrl($url)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUrl', array($url));
-
-        return parent::setUrl($url);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getUrl()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUrl', array());
-
-        return parent::getUrl();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function setAlt($alt)
     {
 
@@ -318,6 +296,28 @@ class Image extends \Al\AlinerieBundle\Entity\Image implements \Doctrine\ORM\Pro
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getWebPath', array());
 
         return parent::getWebPath();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setExtension($extension)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExtension', array($extension));
+
+        return parent::setExtension($extension);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getExtension()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getExtension', array());
+
+        return parent::getExtension();
     }
 
 }

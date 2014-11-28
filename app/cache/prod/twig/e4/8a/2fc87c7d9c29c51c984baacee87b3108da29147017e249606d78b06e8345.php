@@ -13,6 +13,7 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
             'article' => array($this, 'block_article'),
+            'admin' => array($this, 'block_admin'),
             'javascripts' => array($this, 'block_javascripts'),
         );
     }
@@ -100,27 +101,25 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
         $this->displayBlock('article', $context, $blocks);
         // line 60
         echo "        
-\t\t<section class=\"row\">
-\t\t<div class=\"col-md-12\">
-\t\t\t<div class=\"widgetRS\">
-\t\t\t\tWidget Réseau sociaux
-\t\t\t</div>
-\t\t</div>
-\t\t</section>
+";
+        // line 61
+        $this->displayBlock('admin', $context, $blocks);
+        // line 62
+        echo "        
         <div class=\"col-sm-6 col-md-4\">
         ";
-        // line 69
+        // line 64
         echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AlAlinerieBundle:Article:listeArticle"));
         echo "\t
         </div>
-\t\t<section class=\"row\">
+\t\t<section class=\"row\" style=\"margin:0px;\">
 \t\t
   ";
-        // line 73
+        // line 68
         echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AlAlinerieBundle:Article:unZoom"));
         echo "\t
   ";
-        // line 74
+        // line 69
         echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AlAlinerieBundle:Article:unFac"));
         echo "\t
             
@@ -137,7 +136,20 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
 \t\t\t\t<div class=\"col-xs-2 col-sm-2 col-md-2 autrerie\">&nbsp;</div>
 \t\t\t</div>
 \t\t\t<div class=\"row\">
-\t\t\t\t<div class=\"col-md-8 copy\"><a data-toggle=\"tooltip\" href=\"#\" title=\"HTML5\"><i class=\"fa fa-html5\"></i></a> <a data-toggle=\"tooltip\" href=\"#\" title=\"CSS3\"><i class=\"fa fa-css3\"></i></a> <a data-toggle=\"tooltip\" href=\"#\" title=\"Font Awesome\"><i class=\"fa fa-flag\"></i></a> <a data-toggle=\"tooltip\" href=\"#\" title=\"Bootstrap Twitter\"><i class=\"fa fa-twitter\"></i></a> Copyrights ALINERIE. &copy; 2014 - <a href=\"\">Mentions légales</a></div>
+\t\t\t\t<div class=\"col-md-8 copy\"><a data-toggle=\"tooltip\" href=\"#\" title=\"HTML5\"><i class=\"fa fa-html5\"></i></a> <a data-toggle=\"tooltip\" href=\"#\" title=\"CSS3\"><i class=\"fa fa-css3\"></i></a> <a data-toggle=\"tooltip\" href=\"#\" title=\"Font Awesome\"><i class=\"fa fa-flag\"></i></a> <a data-toggle=\"tooltip\" href=\"#\" title=\"Bootstrap Twitter\"><i class=\"fa fa-twitter\"></i></a> Copyrights ALINERIE. &copy; 2014 - ";
+        // line 84
+        if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            echo "Bonjour ";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "user", array()), "username", array()), "html", null, true);
+            echo " ! <a href=\"";
+            echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
+            echo "\">Déconnexion</a> ";
+        } else {
+            echo "<a href=\"";
+            echo $this->env->getExtension('routing')->getPath("fos_user_security_login");
+            echo "\">Connexion</a>";
+        }
+        echo " </div>
 \t\t\t\t<div class=\"col-md-4\"></div>
 \t\t\t</div>
 \t\t</footer>
@@ -145,9 +157,9 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
 </div>
     <!-- Bootstrap  + jquery -->
    ";
-        // line 96
+        // line 91
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 104
+        // line 99
         echo "
 <script>
       \$(function (){
@@ -215,15 +227,20 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
     {
     }
 
-    // line 96
+    // line 61
+    public function block_admin($context, array $blocks = array())
+    {
+    }
+
+    // line 91
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 97
+        // line 92
         echo "        ";
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "57f8873_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_57f8873_0") : $this->env->getExtension('assets')->getAssetUrl("js/57f8873_jquery-1.9.1.min_1.js");
-            // line 101
+            // line 96
             echo "            <script type=\"text/javascript\" src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : null), "html", null, true);
             echo "\"></script>
@@ -243,7 +260,7 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
         ";
         }
         unset($context["asset_url"]);
-        // line 103
+        // line 98
         echo "        ";
     }
 
@@ -259,6 +276,6 @@ class __TwigTemplate_e48a2fc87c7d9c29c51c984baacee87b3108da29147017e249606d78b06
 
     public function getDebugInfo()
     {
-        return array (  247 => 103,  227 => 101,  222 => 97,  219 => 96,  214 => 59,  209 => 19,  177 => 18,  172 => 14,  169 => 13,  163 => 10,  151 => 104,  149 => 96,  124 => 74,  120 => 73,  113 => 69,  102 => 60,  100 => 59,  92 => 54,  72 => 37,  68 => 36,  64 => 35,  60 => 34,  51 => 28,  42 => 21,  40 => 13,  34 => 10,  23 => 1,);
+        return array (  264 => 98,  244 => 96,  239 => 92,  236 => 91,  231 => 61,  226 => 59,  221 => 19,  189 => 18,  184 => 14,  181 => 13,  175 => 10,  163 => 99,  161 => 91,  141 => 84,  123 => 69,  119 => 68,  112 => 64,  108 => 62,  106 => 61,  103 => 60,  101 => 59,  93 => 54,  73 => 37,  69 => 36,  65 => 35,  61 => 34,  52 => 28,  43 => 21,  41 => 13,  35 => 10,  24 => 1,);
     }
 }
