@@ -6,5 +6,11 @@
 				<span style="text-align:center;"><i class="fa fa-quote-left"></i>  {{ fac.title }}<br/><strong>{{ fac.author }}</strong></span><p><br/>{{ fac.content }}
 				
 			</div>
+    
+     <p>
+    <a href="{{ path('al_alinerie_editaside', {'aside_id': fac.id}) }}" class="btn btn-default">
+      <i class="fa fa-pencil fa-1x"></i>
+      Modifier l'encart
+                </a></p>
      {% endfor %}
 		</div>

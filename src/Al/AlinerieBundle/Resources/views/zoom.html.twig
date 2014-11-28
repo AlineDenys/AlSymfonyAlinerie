@@ -6,5 +6,13 @@
 			<p>{{ zoom.content }}</p>
 			</div>
             
+            
+            <p>
+    <a href="{{ path('al_alinerie_editaside', {'aside_id': zoom.id}) }}" class="btn btn-default">
+      <i class="fa fa-pencil fa-1x"></i>
+      Modifier l'encart
+                </a></p>
             {% endfor %}
+            
+            
 		</div>

@@ -30,3 +30,9 @@ al_alinerie_deletearticle:
     defaults: {_controller: AlAlinerieBundle:Article:deleteArticle}
     requirements:
         id: \d+
+        
+al_alinerie_editaside:
+    path:    /edit/aside/{aside_id}
+    defaults: {_controller: AlAlinerieBundle:Aside:editAside}
+    requirements:
+        id: \d+

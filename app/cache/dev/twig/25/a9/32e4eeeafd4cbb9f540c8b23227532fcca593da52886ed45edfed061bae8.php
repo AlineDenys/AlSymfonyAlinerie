@@ -35,13 +35,24 @@ class __TwigTemplate_25a932e4eeeafd4cbb9f540c8b23227532fcca593da52886ed45edfed06
             echo "</p>
 \t\t\t</div>
             
+            
+            <p>
+    <a href=\"";
+            // line 11
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("al_alinerie_editaside", array("aside_id" => $this->getAttribute($context["zoom"], "id", array()))), "html", null, true);
+            echo "\" class=\"btn btn-default\">
+      <i class=\"fa fa-pencil fa-1x\"></i>
+      Modifier l'encart
+                </a></p>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['zoom'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 10
-        echo "\t\t</div>";
+        // line 16
+        echo "            
+            
+\t\t</div>";
     }
 
     public function getTemplateName()
@@ -56,6 +67,6 @@ class __TwigTemplate_25a932e4eeeafd4cbb9f540c8b23227532fcca593da52886ed45edfed06
 
     public function getDebugInfo()
     {
-        return array (  44 => 10,  34 => 6,  29 => 4,  26 => 3,  22 => 2,  19 => 1,);
+        return array (  53 => 16,  42 => 11,  34 => 6,  29 => 4,  26 => 3,  22 => 2,  19 => 1,);
     }
 }

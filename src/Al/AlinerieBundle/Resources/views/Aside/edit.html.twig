@@ -1,0 +1,26 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+  Modifier un encart - {{ parent() }}
+{% endblock %}
+
+{% block article %}
+
+{% if aside.type==1 %}
+  <h2>Modifier le zoom sur.</h2>
+{% else %}
+  <h2>Modifier la question|réponse.</h2>
+{% endif %}
+
+  {{ include("AlAlinerieBundle:Aside:form.html.twig") }}
+
+<p>Après la modification, vous serez redirigé vers la page d'accueil.</p>
+
+  <p>
+    <a href="{{ path('al_alinerie_homepage') }}" class="btn btn-default">
+      <i class="fa fa-angle-left fa-1x"></i>
+      Retour à l'accueil
+    </a>
+  </p>
+
+{% endblock %}

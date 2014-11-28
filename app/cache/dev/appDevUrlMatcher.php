@@ -211,6 +211,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'al_alinerie_deletearticle')), array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\ArticleController::deleteArticleAction',));
         }
 
+        // al_alinerie_editaside
+        if (0 === strpos($pathinfo, '/edit/aside') && preg_match('#^/edit/aside/(?P<aside_id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'al_alinerie_editaside')), array (  '_controller' => 'Al\\AlinerieBundle\\Controller\\AsideController::editAsideAction',));
+        }
+
         // _welcome
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
